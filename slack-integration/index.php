@@ -13,7 +13,7 @@
 include 'keys.php';
 
 // For using libraries through Composer
-require_once 'vendor/autoload.php';
+//require_once 'vendor/autoload.php';
 
 // Include our Slack interface classes
 require_once 'slack-interface/class-slack.php';
