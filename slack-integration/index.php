@@ -12,8 +12,8 @@
 
 include 'keys.php';
 
-// For using libraries through Composer
-//require_once 'vendor/autoload.php';
+// For using Requests library
+require_once 'Requests/library/Requests.php';
 
 // Include our Slack interface classes
 require_once 'slack-interface/class-slack.php';
@@ -82,25 +82,25 @@ function do_action( $slack, $action ) {
 				$result_message = $e->getMessage();
 			}
 			break;
-
-		// Sends a notification to Slack
-		case 'send_notification':
-			$message = isset( $_REQUEST['text'] ) ? $_REQUEST['text'] : 'Hello!';
-
-			try {
-				$slack->send_notification( $message );
-				$result_message = 'Notification sent to Slack channel.';
-			} catch ( Slack_API_Exception $e ) {
-				$result_message = $e->getMessage();
-			}
-			break;
-
-		// Responds to a Slack slash command. Notice that commands are registered
-		// at Slack initialization.
-		case 'command':
-			$slack->do_slash_command();
-			break;
-
+//
+//		// Sends a notification to Slack
+//		case 'send_notification':
+//			$message = isset( $_REQUEST['text'] ) ? $_REQUEST['text'] : 'Hello!';
+//
+//			try {
+//				$slack->send_notification( $message );
+//				$result_message = 'Notification sent to Slack channel.';
+//			} catch ( Slack_API_Exception $e ) {
+//				$result_message = $e->getMessage();
+//			}
+//			break;
+//
+//		// Responds to a Slack slash command. Notice that commands are registered
+//		// at Slack initialization.
+//		case 'command':
+//			$slack->do_slash_command();
+//			break;
+//
 		default:
 			break;
 
