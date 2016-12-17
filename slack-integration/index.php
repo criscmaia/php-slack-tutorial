@@ -10,12 +10,7 @@
  * @author Jarkko Laine <jarkko@jarkkolaine.com>
  */
 
-// Define Slack application identifiers
-// Even better is to put these in environment variables so you don't risk exposing
-// them to the outer world (e.g. by committing to version control)
-define( 'SLACK_CLIENT_ID', 'Paste your client ID here' );
-define( 'SLACK_CLIENT_SECRET', 'Paste your client secret here' );
-define( 'SLACK_COMMAND_TOKEN', 'Paste your command verification token here' );
+include 'keys.php';
 
 // For using libraries through Composer
 require_once 'vendor/autoload.php';
