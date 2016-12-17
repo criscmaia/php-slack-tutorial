@@ -2,6 +2,9 @@
 namespace Slack_Interface;
 
 use Requests;
+// added by me, didn't work
+//require_once 'Requests/library/Requests.php';
+
 
 /**
  * A basic Slack interface you can use as a starting point
